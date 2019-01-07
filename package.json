@@ -1,0 +1,39 @@
+{
+  "name": "collectio-hashmap",
+  "version": "1.0.0",
+  "description": "Implementation of Map with a configurable equality algorithm",
+  "main": "./src/index.js",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litichevskiydv/collectio-hashmap.git"
+  },
+  "keywords": [
+    "Collections",
+    "Map",
+    "Hashing",
+    "HashMap"
+  ],
+  "author": "Dmitriy Litichevskiy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/litichevskiydv/collectio-hashmap/issues"
+  },
+  "homepage": "https://github.com/litichevskiydv/collectio-hashmap#readme",
+  "devDependencies": {
+    "coveralls": "3.0.2",
+    "jest": "23.6.0",
+    "jest-extended": "0.11.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupTestFrameworkScriptFile": "jest-extended"
+  }
+}
