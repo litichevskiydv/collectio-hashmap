@@ -33,10 +33,10 @@ class HashMap {
    * @returns Returns the element associated with the specified key or undefined if the key can't be found in the HashMap object.
    */
   get(key) {
-    let bucket = this._data.get(this._equalityComparer.getHashCode(key));
+    const bucket = this._data.get(this._equalityComparer.getHashCode(key));
     if (!bucket) return bucket;
 
-    let pair = bucket.find(x => this._equalityComparer.equals(x[0], key));
+    const pair = bucket.find(x => this._equalityComparer.equals(x[0], key));
     if (!pair) return pair;
 
     return pair[1];
@@ -49,14 +49,14 @@ class HashMap {
    * @returns The HashMap object.
    */
   set(key, value) {
-    let hashCode = this._equalityComparer.getHashCode(key);
+    const hashCode = this._equalityComparer.getHashCode(key);
     let bucket = this._data.get(hashCode);
     if (!bucket) {
       bucket = [];
       this._data.set(hashCode, bucket);
     }
 
-    let pair = bucket.find(x => this._equalityComparer.equals(x[0], key));
+    const pair = bucket.find(x => this._equalityComparer.equals(x[0], key));
     if (!pair) {
       bucket.push([key, value]);
       this._size++;
@@ -80,7 +80,7 @@ class HashMap {
    * @returns {boolean} true if an element in the set HashMap object been removed successfully; otherwise false.
    */
   delete(key) {
-    let bucket = this._data.get(this._equalityComparer.getHashCode(key));
+    const bucket = this._data.get(this._equalityComparer.getHashCode(key));
     if (!bucket) return false;
 
     for (var i = 0; i < bucket.length && this._equalityComparer.equals(bucket[i][0], key) === false; i++);
@@ -119,8 +119,8 @@ class HashMap {
   }
 
   *_iterateElements(selector) {
-    for (let bucket of this._data.values()) {
-      for (let pair of bucket) {
+    for (const bucket of this._data.values()) {
+      for (const pair of bucket) {
         yield selector(pair);
       }
     }
