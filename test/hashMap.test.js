@@ -22,27 +22,27 @@ class KeysComparer {
 
 test("Should set and get value", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
 
   // When
   map.set(firstKey, firstKeyValue);
 
   // Then
-  let secondKey = new Key(firstKey.hi, firstKey.lo);
+  const secondKey = new Key(firstKey.hi, firstKey.lo);
   expect(map.get(secondKey)).toBe(firstKeyValue);
   expect(map.size).toBe(1);
 });
 
 test("Should override existed value", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
-  let firstKeyAnotherValue = 2;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
+  const firstKeyAnotherValue = 2;
 
   // When
   map.set(firstKey, firstKeyValue);
@@ -55,10 +55,10 @@ test("Should override existed value", () => {
 
 test("Should confirm key existence", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
 
   // When
   map.set(firstKey, firstKeyValue);
@@ -69,13 +69,13 @@ test("Should confirm key existence", () => {
 
 test("Should delete existed key", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
 
-  let secondKey = new Key(2, 2);
-  let secondKeyValue = 2;
+  const secondKey = new Key(2, 2);
+  const secondKeyValue = 2;
 
   // When
   map.set(firstKey, firstKeyValue);
@@ -89,12 +89,12 @@ test("Should delete existed key", () => {
 
 test("Should delete not existed key", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
 
-  let secondKey = new Key(2, 2);
+  const secondKey = new Key(2, 2);
 
   // When, Then
   map.set(firstKey, firstKeyValue);
@@ -105,13 +105,13 @@ test("Should delete not existed key", () => {
 
 test("Should clear collection", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
 
-  let secondKey = new Key(2, 2);
-  let secondKeyValue = 2;
+  const secondKey = new Key(2, 2);
+  const secondKeyValue = 2;
 
   // When
   map.set(firstKey, firstKeyValue);
@@ -126,18 +126,18 @@ test("Should clear collection", () => {
 
 test("Should collect values", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
 
-  let secondKey = new Key(2, 2);
-  let secondKeyValue = 2;
+  const secondKey = new Key(2, 2);
+  const secondKeyValue = 2;
 
   // When
   map.set(firstKey, firstKeyValue);
   map.set(secondKey, secondKeyValue);
-  let values = [];
+  const values = [];
   map.forEach(x => values.push(x));
 
   // Then
@@ -146,18 +146,18 @@ test("Should collect values", () => {
 
 test("Should get keys", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
 
-  let secondKey = new Key(2, 2);
-  let secondKeyValue = 2;
+  const secondKey = new Key(2, 2);
+  const secondKeyValue = 2;
 
   // When
   map.set(firstKey, firstKeyValue);
   map.set(secondKey, secondKeyValue);
-  let keys = Array.from(map.keys());
+  const keys = Array.from(map.keys());
 
   // Then
   expect(keys).toIncludeSameMembers([firstKey, secondKey]);
@@ -165,18 +165,18 @@ test("Should get keys", () => {
 
 test("Should get values", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
 
-  let secondKey = new Key(2, 2);
-  let secondKeyValue = 2;
+  const secondKey = new Key(2, 2);
+  const secondKeyValue = 2;
 
   // When
   map.set(firstKey, firstKeyValue);
   map.set(secondKey, secondKeyValue);
-  let values = Array.from(map.values());
+  const values = Array.from(map.values());
 
   // Then
   expect(values).toIncludeSameMembers([firstKeyValue, secondKeyValue]);
@@ -184,18 +184,18 @@ test("Should get values", () => {
 
 test("Should get entries", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
 
-  let secondKey = new Key(2, 2);
-  let secondKeyValue = 2;
+  const secondKey = new Key(2, 2);
+  const secondKeyValue = 2;
 
   // When
   map.set(firstKey, firstKeyValue);
   map.set(secondKey, secondKeyValue);
-  let entries = Array.from(map.entries());
+  const entries = Array.from(map.entries());
 
   // Then
   expect(entries).toIncludeSameMembers([[firstKey, firstKeyValue], [secondKey, secondKeyValue]]);
@@ -203,19 +203,19 @@ test("Should get entries", () => {
 
 test("Should iterate collection", () => {
   // Given
-  let map = new HashMap(new KeysComparer());
+  const map = new HashMap(new KeysComparer());
 
-  let firstKey = new Key(1, 1);
-  let firstKeyValue = 1;
+  const firstKey = new Key(1, 1);
+  const firstKeyValue = 1;
 
-  let secondKey = new Key(2, 2);
-  let secondKeyValue = 2;
+  const secondKey = new Key(2, 2);
+  const secondKeyValue = 2;
 
   // When
   map.set(firstKey, firstKeyValue);
   map.set(secondKey, secondKeyValue);
 
-  let entries = Array.from(map);
+  const entries = Array.from(map);
 
   // Then
   expect(entries).toIncludeSameMembers([[firstKey, firstKeyValue], [secondKey, secondKeyValue]]);
