@@ -136,7 +136,7 @@ class HashMap {
 
   /**
    * Method returns a new Iterator contains keys for each element of the HashMap object.
-   * @returns {Iterable<any>} A new Iterator contains values for each element of the HashMap object.
+   * @returns {Iterable<any>} A new Iterator contains keys for each element of the HashMap object.
    */
   keys() {
     return this._iterateElements(pair => pair[0]);
