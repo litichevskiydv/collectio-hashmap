@@ -16,6 +16,7 @@ jobs:
       install: npm ci
       script: jest --coverage --coverageReporters=text-lcov | coveralls
     - stage: deploy
+      if: branch = master && commit_message !~ /no-deploy/
       node_js: lts/*
       install: npm ci
       script: skip
@@ -24,5 +25,3 @@ jobs:
         email: litichevskiydv@gmail.com
         api_key:
           secure: Tpo9JiOlp4OhB2LUr0LBsYRrd/TcrprI+j1szVzAb98Q+b10cC584uP0VM1XmD1mO9Yns2EIzroxAqUgaNPxXmj4z+OvVitiH0VDEjqC8wAmPFfYHiIEw3Ura37jyYmYEp9vVqGrAbjgKgaPKyZCVXbTiKuhM26dZW7E9jq3PMz+LzPM6mT88xZbzWROn42SdG4a/RoMAgOSqFq/H988V2qVx1mO7uyzzRD1FOZLTqzaLJHTYiv4ggNglyacGlcCBTCEaLMnIYTy/Z7TDpOb4WZeA0+6sfpjiJPJpbVAXrfxkObt96Nqoa6cHtm7LDVu/G+tH6kPkVYz6ob/rpOIaRytO1OeEkx1MSa1Un/2NqUY745nRzTbosYcfAmqPP+QyjlnCzSSJatY6AI1VfS/csLU/WMg1N39/XJSBY4J/AOTD/ja8Y6QXhaqbhYK9/LS5AQFFXuislXWqwweAN9RtQRGxzTFWED41wmUbJuKXb0XAv0NICsXDak5YgFE5HuSjtn4USpIIW0nqB+263RlU7138RhspmVqgK6eqxXOOfq9cl98UtfSlInmEPvCecBv1FyifjwT51mVxwrFk8edkIseqsgpwztrigJiSyP+CNWX0HDd/bxUECLk/twVempqUK4DyIghz4vpZkeVRaTwkZrtGp4WTGtmqqKCWtgUldM=
-        on:
-          branch: master
