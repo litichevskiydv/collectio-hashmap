@@ -2,6 +2,9 @@
   "name": "collectio-hashmap",
   "version": "1.0.1",
   "description": "Implementation of Map with a configurable equality algorithm",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "main": "./src/index.js",
   "files": [
     "src",
