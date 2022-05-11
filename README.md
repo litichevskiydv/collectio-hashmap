@@ -2,8 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/collectio-hashmap.svg)](https://www.npmjs.com/package/collectio-hashmap)
 [![npm downloads](https://img.shields.io/npm/dt/collectio-hashmap.svg)](https://www.npmjs.com/package/collectio-hashmap)
-[![dependencies](https://img.shields.io/david/litichevskiydv/collectio-hashmap.svg)](https://www.npmjs.com/package/collectio-hashmap)
-[![dev dependencies](https://img.shields.io/david/dev/litichevskiydv/collectio-hashmap.svg)](https://www.npmjs.com/package/collectio-hashmap)
+[![dependencies status](https://img.shields.io/librariesio/github/litichevskiydv/collectio-hashmap)](https://www.npmjs.com/package/collectio-hashmap)
 [![Build Status](https://github.com/litichevskiydv/collectio-hashmap/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/litichevskiydv/collectio-hashmap/actions/workflows/ci.yaml)
 [![Coverage Status](https://coveralls.io/repos/github/litichevskiydv/collectio-hashmap/badge.svg?branch=master)](https://coveralls.io/github/litichevskiydv/collectio-hashmap?branch=master)
 
